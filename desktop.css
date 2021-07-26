@@ -1,0 +1,112 @@
+:root{
+    /*primario*/
+
+    --Strong_cyan: hsl(172, 67%, 45%);
+
+    /*secundarios*/
+    --Very_dark_cyan: hsl(183, 100%, 15%);
+    --Dark_grayish_cyan: hsl(186, 14%, 43%);
+    --Dark_grayish_cyan: hsl(184, 14%, 56%);
+    --Light_grayish_cyan_one: hsl(185, 41%, 84%);
+    --Light_grayish_cyan_two: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Dark_green: rgba(13,104,109,1);
+
+    /*tipografia*/
+    --font: 'Space Mono', monospace; 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--Light_grayish_cyan_one);
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 700px;
+    height: 400px;
+    background-color: var(--White);
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        "BILL RESET"
+        "TIP RESET"
+        "PEOPLE RESET";
+    border-radius: 15px;
+}
+
+input{
+    width: 80%;
+    height: 40px;
+    border-radius: 7px;
+    text-align: end;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--Dark_grayish_cyan);
+    background-color: var(--Light_grayish_cyan_two);
+}
+.bill{
+    grid-area: BILL;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tip__grid{
+    grid-area: TIP;
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    gap: 12px;
+}
+.tip__grid button{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--Very_dark_cyan);
+    color: var(--White);
+    border: 1px solid var(--Very_dark_cyan);
+}
+.people{
+    grid-area: PEOPLE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result{
+    grid-area: RESET;
+    background-color: var(--Very_dark_cyan);
+    width: 85%;
+    height: 85%;
+    border-radius: 12px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--White);
+}
+.result button{
+    width: 80%;
+    height: 40px;
+    color: var(--Very_dark_cyan);
+    background-color: var(--Dark_green);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}

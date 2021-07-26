@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="desktop.css">
   <link rel="stylesheet" href="mobile.css"  media="(max-width:425px)">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,28 +25,29 @@
   <div class="container">
     <section class="bill">
       <h3>Bill</h3>
-      <input type="text" class="bill__input">
+      <input type="number" class="bill__input">
     </section>
     <section class="tip">
       <h3>Select Tip %</h3>
       <div class="tip__grid">
-       <!-- <button>5%</button>
+       <button>5%</button>
         <button>10%</button>
         <button>15%</button>
         <button>25%</button>
         <button>50%</button>
-        <button>Custom</button>-->
+        <button>Custom</button>
       </div>
      
       
     </section>
     <section class="people">
+      <h3>Number of People</h3>
       <input type="number" class="people__number">
     </section>
     <section class="result">
-      <div></div>
-      <div></div>
-      <button>Reset</button>
+      <div>tip Amount</div>
+      <div>Total</div>
+      <button>RESET</button>
     </section>
   </div>
 
