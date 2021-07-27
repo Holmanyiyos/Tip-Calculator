@@ -25,28 +25,42 @@
   <div class="container">
     <section class="bill">
       <h3>Bill</h3>
-      <input type="number" class="bill__input">
+      <input type="number" class="bill__input" placeholder="0">
     </section>
     <section class="tip">
       <h3>Select Tip %</h3>
       <div class="tip__grid">
-       <button>5%</button>
+       <button id="active">5%</button>
         <button>10%</button>
         <button>15%</button>
         <button>25%</button>
         <button>50%</button>
-        <button>Custom</button>
+        <input type="number" placeholder="Custom"/>
       </div>
      
       
     </section>
     <section class="people">
       <h3>Number of People</h3>
-      <input type="number" class="people__number">
+      <input type="number" class="people__number" placeholder="0">
     </section>
     <section class="result">
-      <div>tip Amount</div>
-      <div>Total</div>
+      <div>
+        <div class="result__amount">
+          <div>
+            <h4>Tip Amount</h4>
+            <p>/ person</p>
+          </div>
+          <p class="result__price">$0.00</p>
+      </div>
+        <div class="result__total">
+          <div>
+            <h4>Total</h4>
+            <p>/ person</p>
+          </div>
+          <p class="result__price">$0.00</p>
+        </div>
+      </div>
       <button>RESET</button>
     </section>
   </div>
