@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="desktop.css" media="(min-width:1020px)">
   <link rel="stylesheet" href="mobile.css"  media="(max-width:425px)">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,24 +18,24 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="flex">
   <header>
     <h2>S P L I<br> T T E R</h2>
   </header>
-  <div class="container">
+  <div class="container ">
     <section class="bill">
       <h3>Bill</h3>
-      <input type="text" class="bill__input">
+      <input type="number" class="bill__input" placeholder="0">
     </section>
     <section class="tip">
       <h3>Select Tip %</h3>
-      <div class="tip__grid">
-        <button class="tip__grid__btn__1">5%</button>
-        <button class="tip__grid__btn__2">10%</button>
-        <button class="tip__grid__btn__3">15%</button>
-        <button class="tip__grid__btn__4">25%</button>
-        <button class="tip__grid__btn__5">50%</button>
-        <button class="tip__grid__btn__6">Custom</button>
+      <div class="tip__grid" id="tip">
+        <button class="tip__grid__btn__1 " value="5">5%</button>
+        <button class="tip__grid__btn__2 " value="10">10%</button>
+        <button class="tip__grid__btn__3 " value="15">15%</button>
+        <button class="tip__grid__btn__4 " value="25">25%</button>
+        <button class="tip__grid__btn__5 " value="50">50%</button>
+        <input class="tip__grid__btn__6" type="number" placeholder="CUSTOM">
       </div>
      
       
@@ -43,7 +44,9 @@
       <h3>Number of People</h3>
       <input type="number" class="people__number">
     </section>
-    <section class="result">
+
+
+    <section class="result flex">
       <div class="result__container">
         <div class="result__amount">
           <div>
@@ -63,6 +66,16 @@
       <button>RESET</button>
     </section>
   </div>
+  <script>
+
+    const btnContainer= document.querySelector('#tip');
+    for(let i = 0; i < 5; i++){
+      btnContainer.children[i].addEventListener('click',getValue);
+    }
+    function getValue(){
+      console.log(this.value);
+    }
+  </script>
 
   <!--Bill
 

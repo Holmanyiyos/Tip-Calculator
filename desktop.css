@@ -1,0 +1,215 @@
+:root{
+    /*primario*/
+
+    --Strong_cyan: hsl(172, 67%, 45%);
+
+    /*secundarios*/
+    --Very_dark_cyan: hsl(183, 100%, 15%);
+    --Dark_grayish_cyan: hsl(186, 14%, 43%);
+    --Dark_grayish_cyan: hsl(184, 14%, 56%);
+    --Light_grayish_cyan_one: hsl(185, 41%, 84%);
+    --Light_grayish_cyan_two: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Dark_green: rgba(13,104,109,1);
+
+    /*tipografia*/
+    --font: 'Space Mono', monospace; 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    color: #436567;
+}
+body{
+    background-color: var(--Light_grayish_cyan_one);
+    font-family: var(--font);
+    height: 90vh;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result, .people, .tip, .bill, body{
+    
+}
+.container{
+    width: 64%;
+    height: 481px;
+    background-color: var(--White);
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        "BILL RESET"
+        "TIP RESET"
+        "PEOPLE RESET";
+    border-radius: 15px;
+}
+h3{
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: var(--Dark_grayish_cyan);
+}
+input{
+    
+    height: 40px;
+    border-radius: 7px;
+    text-align: end;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--Very_dark_cyan);
+    outline-color: var(--Strong_cyan);
+    
+}
+input::placeholder{
+    font-size: 18px;
+    color: var(--Light_grayish_cyan_one);
+}
+
+/*----------- bill -----------*/
+.bill{
+    grid-area: BILL;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 5.3%;
+    padding-right: 5.3%; 
+}
+.bill__input{
+    width: 100%;
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 19px;
+    background-color: var( --Light_grayish_cyan_two);
+}
+
+/*----------------- tip ---------------------*/
+.tip{
+    width: 100%;
+    padding-left: 5.3%;
+    padding-right: 5.3%; 
+    grid-area: TIP;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tip__grid{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 16px;
+}
+.tip__grid button, .tip__grid input{
+    height: 48px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--Very_dark_cyan);
+    color: var(--White);
+    border: 1px solid var(--Very_dark_cyan);
+    cursor: pointer;
+    width: 100%;
+    font-family: var(--font)
+}
+
+.tip__grid input{
+    background-color: var(--Light_grayish_cyan_two);
+    border: none;
+    color: var(--Very_dark_cyan);
+}
+.tip__grid input::placeholder{
+   padding-left: 2px;
+   color: var(--Dark_grayish_cyan);
+}
+
+/*------------------ people ---------------------*/
+.people{
+    grid-area: PEOPLE;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5.3%;
+    padding-right: 5.3%; 
+}
+.people__number{
+    width: 100%;
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 19px;
+    background-color: var( --Light_grayish_cyan_two);
+}
+
+
+
+
+
+/*---------- result ----------*/
+.result{
+    grid-area: RESET;
+    background-color: var(--Very_dark_cyan);
+    width: 95%;
+    height: 85%;
+    border-radius: 12px;
+    margin-top: 30px;
+    justify-content: space-around;
+    color: var(--White);
+}
+.result button{
+    width: 80%;
+    height: 40px;
+    color: var(--Very_dark_cyan);
+    background-color: var(--Dark_green);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.result button:hover{
+    background-color: var(--Strong_cyan);
+}
+.result > div{
+    width: 100%;
+}
+.result__amount, .result__total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 20px 30px 20px;
+}
+.result__amount div p, .result__total div p{
+    font-size: 12px;
+    color: var(--Strong_cyan);
+}
+.result__price{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--Strsong_cyan);
+}
+
+
+
+/* --------- states --------------*/
+#active{
+    background-color: var(--Light_grayish_cyan_one);
+    border: none;
+    color: var(--Very_dark_cyan);
+    font-weight: bold;
+}
+
+#error{
+    outline-color: red;
+}

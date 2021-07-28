@@ -57,7 +57,6 @@ header h2{
 .bill__input{
     width: 100%;
     height: 48px;
-    padding-left: 206px;
     background-image: url('images/icon-dollar.svg');
     background-repeat: no-repeat;
     background-position-y: center;
@@ -68,6 +67,8 @@ header h2{
     font-size: 20px;
     color: var(--Very_dark_cyan);
     font-weight: bold;
+    text-align: end;
+    outline-color: var(--Strong_cyan);
 }
 .tip{
     width: 100%;
@@ -102,6 +103,14 @@ header h2{
 .tip__grid__btn__6{
     grid-row: 5/5;
     grid-column: 4/3;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Light_grayish_cyan_two);
+    font-size: 20px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--Dark_grayish_cyan);
+    text-align: end;
 }
 .tip__grid button{
     background-color: var(--Very_dark_cyan);
@@ -128,7 +137,6 @@ header h2{
 .people__number{
     width: 100%;
     height: 48px;
-    padding-left: 206px;
     background-image: url('images/icon-person.svg');
     background-repeat: no-repeat;
     background-position-y: center;
@@ -140,6 +148,8 @@ header h2{
     color: var(--Very_dark_cyan);
     font-weight: bold;
     margin-top: 10px;
+    text-align: end;
+    outline-color: var(--Strong_cyan);
 }
 .result{
     width: 100%;
