@@ -35,10 +35,8 @@ body{
     align-items: center;
     justify-content: center;
 }
-.people h3, .tip h3, .bill h3{
-    align-self: flex-start;
-    margin-left: 40px;
-    margin-bottom: 10px;
+.result, .people, .tip, .bill, body{
+    
 }
 .container{
     width: 64%;
@@ -55,7 +53,9 @@ body{
 }
 h3{
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: var(--Dark_grayish_cyan);
 }
 input{
     
@@ -83,16 +83,13 @@ input::placeholder{
     padding-left: 5.3%;
     padding-right: 5.3%; 
 }
-.bill::before{
-    content: "";
-    width: 15px;
-    height: 23px;
-    background: url('./images/icon-dollar.svg');
-    background-size: cover;
-    position: absolute;
-    left: 40px;
-    bottom: 20px;
-    border-radius: 4px;
+.bill__input{
+    width: 100%;
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 19px;
+    background-color: var( --Light_grayish_cyan_two);
 }
 
 /*----------------- tip ---------------------*/
@@ -144,16 +141,13 @@ input::placeholder{
     padding-left: 5.3%;
     padding-right: 5.3%; 
 }
-.people::before{
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: url('./images/icon-person.svg');
-    background-size: cover;
-    position: absolute;
-    left: 40px;
-    bottom: 22px;
-    border-radius: 4px;
+.people__number{
+    width: 100%;
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 19px;
+    background-color: var( --Light_grayish_cyan_two);
 }
 
 
