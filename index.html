@@ -30,12 +30,12 @@
     <section class="tip">
       <h3>Select Tip %</h3>
       <div class="tip__grid" id="tip">
-        <button class="tip__grid__btn__1 " value="5">5%</button>
-        <button class="tip__grid__btn__2 " value="10">10%</button>
-        <button class="tip__grid__btn__3 " value="15">15%</button>
-        <button class="tip__grid__btn__4 " value="25">25%</button>
-        <button class="tip__grid__btn__5 " value="50">50%</button>
-        <input class="tip__grid__btn__6" type="number" placeholder="CUSTOM">
+       <button value="5">5%</button>
+        <button value="10">10%</button>
+        <button value="15">15%</button>
+        <button value="25">25%</button>
+        <button value="50">50%</button>
+        <input type="number" placeholder="Custom"/>
       </div>
      
       
@@ -101,5 +101,15 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>-->
+  <script>
+      const btnContainer = document.getElementById('tip')
+      for(let i=0; i<5; i++){
+        btnContainer.children[i].addEventListener('click', getValue)
+      }
+
+    function getValue(){
+      console.log(this.value)
+    }
+  </script>
 </body>
 </html>
