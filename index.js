@@ -21,7 +21,6 @@ function calc(){
             let porcentaje = parseInt(this.value);
             let ticket = parseFloat(bill.value);
             let person = parseInt(people.value);
-            debugger
             const tipAmount = ((ticket * porcentaje) / 100) / person;
             const total = parseFloat((ticket / person) + tipAmount).toFixed(2);
             printHTML(total, parseFloat(tipAmount).toFixed(2));
