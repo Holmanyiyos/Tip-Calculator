@@ -25,7 +25,7 @@
   <div class="container ">
     <section class="bill">
       <h3>Bill</h3>
-      <input type="number" class="bill__input" placeholder="0">
+      <input type="number" name="bill" class="bill__input" placeholder="0" id="bill" >
     </section>
     <section class="tip">
       <h3>Select Tip %</h3>
@@ -35,14 +35,14 @@
         <button class="tip__grid__btn__3 " value="15">15%</button>
         <button class="tip__grid__btn__4 " value="25">25%</button>
         <button class="tip__grid__btn__5 " value="50">50%</button>
-        <input class="tip__grid__btn__6" type="number" placeholder="CUSTOM">
+        <input class="tip__grid__btn__6" id="custom" type="number" placeholder="CUSTOM">
       </div>
      
       
     </section>
     <section class="people">
       <h3>Number of People</h3>
-      <input type="number" class="people__number">
+      <input type="number" class="people__number" id="people">
     </section>
 
 
@@ -53,53 +53,19 @@
             <h4>Tip Amount</h4>
             <span>/ person</span>
           </div>
-          <p class="result__price">$0.00</p>
+          <p class="result__price" id="tipAmount">$0.00</p>
         </div>
         <div class="result__total">
           <div>
             <h4>Total</h4>
             <span>/ person</span>
           </div>
-          <p class="result__price">$0.00</p>
+          <p class="result__price" id="total">$0.00</p>
         </div>
       </div>
-      <button>RESET</button>
+      <button id="reset">RESET</button>
     </section>
   </div>
-  <script>
-
-    const btnContainer= document.querySelector('#tip');
-    for(let i = 0; i < 5; i++){
-      btnContainer.children[i].addEventListener('click',getValue);
-    }
-    function getValue(){
-      console.log(this.value);
-    }
-  </script>
-
-  <!--Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>-->
+  <script src="index.js"></script>
 </body>
 </html>
