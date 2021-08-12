@@ -18,10 +18,13 @@ reset.addEventListener('click', resetAll);
 function calc(){
     if(bill.value &&  bill.value > 0){
         if(people.value &&  people.value > 0){
-            let porcentaje = this.value;
-            const tipAmount = parseFloat(((bill.value * porcentaje) / 100) / people.value).toFixed(2);
-            const total = parseFloat((bill.value / people.value) + tipAmount).toFixed(2);
-            printHTML(total, tipAmount);
+            let porcentaje = parseInt(this.value);
+            let ticket = parseFloat(bill.value);
+            let person = parseInt(people.value);
+            debugger
+            const tipAmount = ((ticket * porcentaje) / 100) / person;
+            const total = parseFloat((ticket / person) + tipAmount).toFixed(2);
+            printHTML(total, parseFloat(tipAmount).toFixed(2));
         }else{
             handleError(people);
         }
